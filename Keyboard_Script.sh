@@ -7,7 +7,7 @@ else
     echo "No previous process was found."
 fi
 
-internalKeyId="$(xinput list | awk '/(8910)/ {print $8}' | awk -F"id=" '/id/{print $2}')"
+internalKeyId="$(xinput list | awk '/keyboard/ {print}' | awk '/(8910)/ {print}' |  awk '/Keyboard/ {print $8}' | awk -F"id=" '{print $2}')"
 
 clean()
 {
