@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#!/usr/bin/env bash
 
 if kill -9 $(pgrep -f ${BASH_SOURCE[0]} | grep -v $$)
 then

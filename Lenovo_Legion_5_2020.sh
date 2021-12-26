@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#!/usr/bin/env bash
 
 conservation_mode="/sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode"
 usb_charging="/sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/usb_charging"

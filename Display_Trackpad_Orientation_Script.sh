@@ -1,4 +1,4 @@
-#! //usr/bin/env bash
+#!/usr/bin/env bash
 
 externalMouse="$(xinput list | awk '/Logitech Wireless Mouse/ {print $6}' | awk -F"id=" '{print $2}')"
 trackpad="$(xinput list | awk '/Touchpad/ {print}' | awk -F"id=" '{print $2}' | awk -F" " '{print $1}')"
