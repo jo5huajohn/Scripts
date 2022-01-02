@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-externalMouse="$(xinput list | awk '/Logitech Wireless Mouse/ {print $6}' | awk -F"id=" '{print $2}')"
-trackpad="$(xinput list | awk '/Touchpad/ {print}' | awk -F"id=" '{print $2}' | awk -F" " '{print $1}')"
+trackpad=`xinput list | awk '/Touchpad/ { print $6 }' | awk -F"=" '{ print $2 }'`
 
 while getopts "lrni" options
 do
