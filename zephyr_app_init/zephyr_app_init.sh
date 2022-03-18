@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-script_directory=$HOME/Scripts/zephyr_app_init
+script_directory=~/Scripts/zephyr_app_init
 app_directory=$1
 board=$2
 
