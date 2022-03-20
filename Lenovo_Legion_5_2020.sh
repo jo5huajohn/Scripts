@@ -5,7 +5,7 @@ fn_lock="/sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/fn_lock"
 touchpad="/sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/touchpad"
 usb_charging="/sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/usb_charging"
 
-while getopts "cftu" options
+while getopts "cfhtu" options
 do
     case "${options}" in
         c)
@@ -39,7 +39,17 @@ do
                 echo USB charging off
             fi
             ;;
-        \?) echo Invalid option. Please use --help for correct usage.
+
+        h)
+            echo "Usage:
+c: Toggles Conservation mode.
+f: Toggles Fn-Lock.
+t: Toggles Touchpad.
+u: Toggles USB charging.
+h: Prints usage."
+                ;;
+
+        \?) echo Invalid option. Please use --help or -h for correct usage.
             ;;
     esac
 done
